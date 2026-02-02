@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAGA // MAYHEM</title>
+    <style>
+        :root {
+            --fire-orange: #ff4d00;
+            --dark-red: #8b0000;
+            --smoke-black: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--smoke-black);
+            /* Effet vaporeux en arrière-plan comme sur ta photo */
+            background-image: 
+                radial-gradient(circle at 50% -20%, #441100 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, #220800 0%, transparent 40%);
+            background-attachment: fixed;
+            color: #e0e0e0;
+            font-family: 'Georgia', serif; /* Plus proche du style "LADY GAGA" sur la photo */
+            margin: 0;
+            padding: 40px 10px;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--fire-orange);
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            /* Glow orange pour l'effet feu */
+            text-shadow: 0 0 20px rgba(255, 77, 0, 0.6);
+            font-weight: 400;
+        }
+
+        header p {
+            color: var(--fire-orange);
+            letter-spacing: 3px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        #quote-container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .quote-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 77, 0, 0.3);
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(5px);
+            opacity: 0; /* Géré par le script */
+        }
+
+        .quote-card:hover {
+            border-color: var(--fire-orange);
+            box-shadow: 0 0 30px rgba(255, 77, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .quote-text {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            font-style: italic;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .quote-author {
+            display: block;
+            text-align: right;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: var(--fire-orange);
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 1.2rem;
+            filter: sepia(100%) saturate(500%) hue-rotate(-15deg); /* Rend les emojis oranges */
+            margin-bottom: 20px;
+            display: block;
+            opacity: 0.6;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: var(--fire-orange);
+            opacity: 0.5;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 77, 0, 0.1);
+        }
+
+        @keyframes fadeInFire {
+            from { opacity: 0; transform: scale(0.9); filter: blur(10px); }
+            to { opacity: 1; transform: scale(1); filter: blur(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MAYHEM</h1>
+        <p>LADY GAGA // ORIGINAL QUOTES</p>
+    </header>
+
+    <div id="quote-container">
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"Even if the whole world turns their back on you, you always have yourself."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"I don't want to be normal. I'm terrified of being normal."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"Make love without restraint and without a condom to the idea of the moment."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"You laugh at me because I'm different. I laugh at you because you're all the same."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"If you live your life based on the eyes of others, you will never live your own life."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"Being gay is like glitter, it never goes away."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"They come for the music and the freedom."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"Love yourself, love who you are, you're all you've got."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"I'm obsessively opposed to normality."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"I started dressing like a star before I was one."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"I've always been famous, it's just no one knew it yet."</div><span class="quote-author">GAGA</span></div>
+        <div class="quote-card"><span class="emoji">🔥</span><div class="quote-text">"I'm afraid of dying before all my ideas emerge!"</div><span class="quote-author">GAGA</span></div>
+    </div>
+
+    <footer>
+        NATHAN // SECTOR: BORDEAUX // CAMILLE JULLIAN HS
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const container = document.getElementById('quote-container');
+            const cards = Array.from(container.getElementsByClassName('quote-card'));
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i], cards[j]] = [cards[j], cards[i]];
+            }
+            container.innerHTML = '';
+            cards.forEach((card, index) => {
+                card.style.animation = `fadeInFire 0.8s ease-out ${index * 0.1}s forwards`;
+                container.appendChild(card);
+            });
+        };
+    </script>
+</body>
+</html>
